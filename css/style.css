@@ -78,14 +78,29 @@ footer{
     display: block;
     margin-bottom: 20px;
     padding: 17px;
-    font-size: 1rem;
     font-weight: 500;
     border-radius: 5px;
     border: dashed var(--color) 2px;
-    text-align: center;
     text-decoration: none;  
     color: var(--color);  
     word-wrap: break-word;
+}
+
+.linkDiv {
+	display:table;
+	height: 2rem;
+}
+
+.linkDivText {
+	display:table-cell;
+	vertical-align:middle;
+	font-size: 1rem;
+}
+
+.linkDivImg {
+	display:table-cell;
+	vertical-align:middle;
+	height: 2rem;
 }
 
 @media (prefers-color-scheme: dark) {

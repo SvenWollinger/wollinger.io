@@ -15,9 +15,30 @@
 
 				<h1><a href="#" id="userName" rel="noopener">@SvenWollinger</a></h1>
 				<div id="links">
-					<a class="link" href="https://www.netflix.com/de/title/80114460"  rel="noopener">🍿 Netflix Documentary</a>
-					<a class="link" href="https://en.wikipedia.org/wiki/Minimalism" rel="noopener">📚 Wikipedia Article</a>
-					<a class="link" href="https://siiimple.com/" rel="noopener">🖥 Minimalist Website Gallery</a>
+					<a class="link" href="https://instagram.com/SvenWollinger" target="_blank">
+						<div class="linkDiv">
+							<img class="linkDivImg" src="img/icons8/instagram.svg">
+							<span class="linkDivText">Instagram</span>
+						</div>
+					</a>
+					<a class="link" href="https://twitter.com/SvenWollinger" target="_blank">
+						<div class="linkDiv">
+							<img class="linkDivImg" src="img/icons8/twitter.png">
+							<span class="linkDivText">Twitter</span>
+						</div>
+					</a>
+					<a class="link" href="https://github.com/SvenWollinger" target="_blank">
+						<div class="linkDiv">
+							<img class="linkDivImg" src="img/icons8/github.svg">
+							<span class="linkDivText">GitHub</span>
+						</div>
+					</a>
+					<a class="link" href="javascript:discordButton()">
+						<div class="linkDiv">
+							<img class="linkDivImg" src="img/icons8/discord.svg">
+							<span class="linkDivText">Discord</span>
+						</div>
+					</a>
 				</div>
 
 				<footer>
@@ -25,4 +46,14 @@
 			</div>
 		</div>
 	</body>
+	<script>
+		function discordButton() {
+			var username = "SvenWollinger#0001";
+			navigator.clipboard.writeText(username).then(function() {
+				console.log('Async: Copying to clipboard was successful!');
+			}, function(err) {
+				console.error('Async: Could not copy text: ', err);
+			});
+		}
+	</script>
 </html>
