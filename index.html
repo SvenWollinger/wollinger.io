@@ -36,13 +36,13 @@
 					<a class="link" href="javascript:discordButton()">
 						<div class="linkDiv">
 							<img class="icon-discord">
-							<span>Discord</span>
+							<span id="discordCopyText">Discord</span>
 						</div>
 					</a>
 					<a class="link" href="javascript:mailButton()">
 						<div class="linkDiv">
 							<img class="icon-mail">
-							<span>EMail</span>
+							<span id="mailCopyText">EMail</span>
 						</div>
 					</a>
 				</div>
@@ -52,10 +52,26 @@
 		</div>
 	</body>
 	<script>
+		var discordCopyText = document.getElementById("discordCopyText");
+		var discordCopyTextOriginal = discordCopyText.innerHTML;
+
+		var mailCopyText = document.getElementById("mailCopyText");
+		var mailCopyTextOriginal = mailCopyText.innerHTML;
+
 		function discordButton() {
-			var username = "SvenWollinger#0001";
-			navigator.clipboard.writeText(username).then(function() {
-				console.log('Async: Copying to clipboard was successful!');
+			copyFunction(discordCopyText, discordCopyTextOriginal, "SvenWollinger#0001");
+		}
+	
+		function mailButton() {
+			copyFunction(mailCopyText, mailCopyTextOriginal, "sven@wollinger.email");
+		}
+	
+		function copyFunction(element, originalText, textToCopy) {
+			navigator.clipboard.writeText(textToCopy).then(function() {
+				element.innerHTML = "Copied!";
+				setTimeout(function() {
+					element.innerHTML = originalText;
+				}, 3000);
 			}, function(err) {
 				console.error('Async: Could not copy text: ', err);
 			});
