@@ -11,13 +11,16 @@
 		content:url("/img/icons8/black/github.svg");
 	}
 	.icon-instagram {
-		content-url("/img/icons8/black/instagram.svg");
+		content:url("/img/icons8/black/instagram.svg");
 	}
 	.icon-mail {
 		content:url("/img/icons8/black/mail.png");
 	}
 	.icon-twitter {
 		content:url("/img/icons8/black/twitter.svg");
+	}
+	footer a {
+		color: black;
 	}
 }
 
@@ -36,6 +39,9 @@
 	}
 	.icon-twitter {
 		content:url("/img/icons8/white/twitter.svg");
+	}
+	footer a {
+		color: white;
 	}
 }
 
