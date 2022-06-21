@@ -13,7 +13,7 @@
 			<div class="content">
 				<img id="userPhoto" src="img/avatar.png" alt="User Photo">
 
-				<h1><a href="#" id="userName" rel="noopener">@SvenWollinger</a></h1>
+				<h1><a href="javascript:rotateImage()" id="userName" rel="noopener">@SvenWollinger</a></h1>
 				<div id="links">
 					<a class="link" href="https://instagram.com/SvenWollinger" target="_blank">
 						<div class="linkDiv">
@@ -58,6 +58,24 @@
 		var mailCopyText = document.getElementById("mailCopyText");
 		var mailCopyTextOriginal = mailCopyText.innerHTML;
 
+		var isRotating = false;
+		function rotateImage() {
+			if(isRotating) return;
+			isRotating = true;
+			
+			var image = document.getElementById("userPhoto");
+			var deg = 0;
+			var rotateId = setInterval(function() {
+				if(deg >= 360) {
+					image.style.rotate = "0deg";
+					isRotating = false;				
+					clearInterval(rotateId);
+				}
+				image.style.rotate = deg + "deg";
+				deg += 5;
+			}, 5);
+		}
+		
 		function discordButton() {
 			copyFunction(discordCopyText, discordCopyTextOriginal, "SvenWollinger#0001");
 		}
