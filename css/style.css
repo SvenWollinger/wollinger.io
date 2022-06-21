@@ -136,13 +136,13 @@ footer{
 	height: 2rem;
 }
 
-.linkDivText {
+.linkDiv span {
 	display:table-cell;
 	vertical-align:middle;
 	font-size: 1rem;
 }
 
-.linkDivImg {
+.linkDiv img {
 	display:table-cell;
 	vertical-align:middle;
 	height: 2rem;
