@@ -5,19 +5,19 @@
 
 @media (prefers-color-scheme: light) {
     .icon-discord {
-		content:url("/img/icons8/black/discord.svg");
+		content: url("/img/icons8/black/discord.svg");
 	}
 	.icon-github {
-		content:url("/img/icons8/black/github.svg");
+		content: url("/img/icons8/black/github.svg");
 	}
 	.icon-instagram {
-		content:url("/img/icons8/black/instagram.svg");
+		content: url("/img/icons8/black/instagram.svg");
 	}
 	.icon-mail {
-		content:url("/img/icons8/black/mail.png");
+		content: url("/img/icons8/black/mail.png");
 	}
 	.icon-twitter {
-		content:url("/img/icons8/black/twitter.svg");
+		content: url("/img/icons8/black/twitter.svg");
 	}
 	footer a {
 		color: black;
@@ -26,19 +26,19 @@
 
 @media (prefers-color-scheme: dark) {
     .icon-discord {
-		content:url("/img/icons8/white/discord.svg");
+		content: url("/img/icons8/white/discord.svg");
 	}
 	.icon-github {
-		content:url("/img/icons8/white/github.svg");
+		content: url("/img/icons8/white/github.svg");
 	}
 	.icon-instagram {
-		content:url("/img/icons8/white/instagram.svg");
+		content: url("/img/icons8/white/instagram.svg");
 	}
 	.icon-mail {
-		content:url("/img/icons8/white/mail.png");
+		content: url("/img/icons8/white/mail.png");
 	}
 	.icon-twitter {
-		content:url("/img/icons8/white/twitter.svg");
+		content: url("/img/icons8/white/twitter.svg");
 	}
 	footer a {
 		color: white;
@@ -51,7 +51,7 @@
 	--font: "Roboto Mono", monospace;
 }
 
-body{
+body {
     background-color: var(--background);
     color: var(--color);
     font-family: var(--font);
@@ -73,7 +73,7 @@ body{
     text-align: center;
 }
 
-.content{
+.content {
     display: flex;
     flex-direction: column;
     flex: 1 auto;
@@ -82,14 +82,14 @@ body{
     margin: 0;
 }
 
-footer{
+footer {
     text-align: center;
     font-size: 0.75rem;
     font-weight: 400;
     padding-bottom: 20px;
 }
 
-#userPhoto{
+#userPhoto {
     width: 128px;
     height: 128px;
     display: block;
@@ -98,7 +98,7 @@ footer{
     border: solid var(--color) 2px;
 }
 
-#userName{
+#userName {
     width: 100%;
     font-size: 1.5rem;
     font-weight: 400;
@@ -109,14 +109,14 @@ footer{
     color: var(--color);
 }
 
-#links{
+#links {
     max-width: 90%;
     width: auto;
     display: block;
     margin: 27px auto;
 }
 
-.link{
+.link {
     display: block;
     margin-bottom: 20px;
     padding-left: 	17px;
@@ -132,19 +132,19 @@ footer{
 }
 
 .linkDiv {
-	display:table;
+	display: table;
 	height: 2rem;
 }
 
 .linkDiv span {
-	display:table-cell;
-	vertical-align:middle;
+	display: table-cell;
+	vertical-align: middle;
 	font-size: 1rem;
 }
 
 .linkDiv img {
-	display:table-cell;
-	vertical-align:middle;
+	display: table-cell;
+	vertical-align: middle;
 	height: 2rem;
 }
 
