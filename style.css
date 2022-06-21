@@ -86,15 +86,11 @@ footer{
     text-decoration: none;  
     color: var(--color);  
     word-wrap: break-word;
-
 }
 
-
-
 @media (prefers-color-scheme: dark) {
-    :root {        
-        --background: #202124;
-        --color: white;
-    }
-  }
-  
+	:root {        
+		--background: #202124;
+		--color: white;
+	}
+}
