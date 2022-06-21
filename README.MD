@@ -4,7 +4,7 @@ Based on [LinkFree](https://github.com/MichaelBarney/LinkFree/tree/master/Templa
 
 Adapted to use [Roboto Mono](https://fonts.google.com/specimen/Roboto+Mono) without linking to Google.
 
-Includes ios icons from [Icons8](https://icons8.de/icon/set/instagram/ios).
+Includes material-outlined icons from [Icons8](https://icons8.de/icons/material-outlined).
 
 # License
 
