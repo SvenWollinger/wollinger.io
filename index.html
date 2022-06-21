@@ -11,9 +11,11 @@
 	<body>
 		<div class="container">
 			<div class="content">
-				<img id="userPhoto" src="img/avatar.png" alt="User Photo">
-
-				<h1><a href="javascript:rotateImage()" id="userName" rel="noopener">@SvenWollinger</a></h1>
+				<a href="javascript:rotateImage()" rel="noopener">
+					<img class="spin360" id="userPhoto" src="img/avatar.png" alt="User Photo">
+				</a>
+				
+				<h1 id="userName">@SvenWollinger</h1>
 				<div id="links">
 					<a class="link" href="https://instagram.com/SvenWollinger" target="_blank">
 						<div class="linkDiv">
@@ -64,16 +66,11 @@
 			isRotating = true;
 			
 			var image = document.getElementById("userPhoto");
-			var deg = 0;
-			var rotateId = setInterval(function() {
-				if(deg >= 360) {
-					image.style.rotate = "0deg";
-					isRotating = false;				
-					clearInterval(rotateId);
-				}
-				image.style.rotate = deg + "deg";
-				deg += 5;
-			}, 5);
+			image.classList.add("start");
+			setTimeout(function() {
+				image.classList.remove("start");
+				isRotating = false;
+			}, 500);
 		}
 		
 		function discordButton() {
