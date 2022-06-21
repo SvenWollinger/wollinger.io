@@ -134,6 +134,7 @@ footer {
 .linkDiv {
 	display: table;
 	height: 2rem;
+	border-spacing: 5px 0px;
 }
 
 .linkDiv span {
