@@ -93,9 +93,20 @@ footer {
     width: 128px;
     height: 128px;
     display: block;
-    margin: 20px auto 10px;
     border-radius: 50%;
     border: solid var(--color) 2px;
+}
+
+@media (orientation: landscape) {
+	#userPhoto {
+		margin: 20px auto 10px;
+	}
+}
+
+@media (orientation: portrait) {
+	#userPhoto {
+		margin: 5px;
+	}
 }
 
 #userName {
