@@ -4,43 +4,49 @@
 }
 
 @media (prefers-color-scheme: light) {
-    .icon-discord {
-		content: url("/img/icons8/black/discord.svg");
-	}
-	.icon-github {
-		content: url("/img/icons8/black/github.svg");
-	}
-	.icon-instagram {
-		content: url("/img/icons8/black/instagram.svg");
-	}
-	.icon-mail {
-		content: url("/img/icons8/black/mail.png");
-	}
-	.icon-twitter {
-		content: url("/img/icons8/black/twitter.svg");
-	}
-	footer a {
+    .icon-discord {content: url("/img/icons8/black/discord.svg")}
+	.icon-github {content: url("/img/icons8/black/github.svg")}
+	.icon-instagram {content: url("/img/icons8/black/instagram.svg")}
+	.icon-mail {content: url("/img/icons8/black/mail.png")}
+	.icon-twitter {content: url("/img/icons8/black/twitter.svg")}
+
+    .icon-f-email {content: url("/img/icons8/black/folder-email.png")}
+    .icon-f-email.selected {content: url("/img/icons8/black/folder-email-sel.png")}
+
+    .icon-f-puzzle {content: url("/img/icons8/black/folder-puzzle.png")}
+    .icon-f-puzzle.selected {content: url("/img/icons8/black/folder-puzzle-sel.png")}
+
+    .icon-f-animal {content: url("/img/icons8/black/folder-animal.png")}
+    .icon-f-animal.selected {content: url("/img/icons8/black/folder-animal-sel.png")}
+
+    .icon-f-heart {content: url("/img/icons8/black/folder-heart.png")}
+    .icon-f-heart.selected {content: url("/img/icons8/black/folder-heart-sel.png")}
+    
+    footer a {
 		color: black;
 	}
 }
 
 @media (prefers-color-scheme: dark) {
-    .icon-discord {
-		content: url("/img/icons8/white/discord.svg");
-	}
-	.icon-github {
-		content: url("/img/icons8/white/github.svg");
-	}
-	.icon-instagram {
-		content: url("/img/icons8/white/instagram.svg");
-	}
-	.icon-mail {
-		content: url("/img/icons8/white/mail.png");
-	}
-	.icon-twitter {
-		content: url("/img/icons8/white/twitter.svg");
-	}
-	footer a {
+    .icon-discord {content: url("/img/icons8/white/discord.svg")}
+	.icon-github {content: url("/img/icons8/white/github.svg")}
+	.icon-instagram {content: url("/img/icons8/white/instagram.svg")}
+	.icon-mail {content: url("/img/icons8/white/mail.png")}
+	.icon-twitter {content: url("/img/icons8/white/twitter.svg")}
+
+    .icon-f-email {content: url("/img/icons8/white/folder-email.png")}
+    .icon-f-email.selected {content: url("/img/icons8/white/folder-email-sel.png")}
+
+    .icon-f-puzzle {content: url("/img/icons8/white/folder-puzzle.png")}
+    .icon-f-puzzle.selected {content: url("/img/icons8/white/folder-puzzle-sel.png")}
+
+    .icon-f-animal {content: url("/img/icons8/white/folder-animal.png")}
+    .icon-f-animal.selected {content: url("/img/icons8/white/folder-animal-sel.png")}
+
+    .icon-f-heart {content: url("/img/icons8/white/folder-heart.png")}
+    .icon-f-heart.selected {content: url("/img/icons8/white/folder-heart-sel.png")}
+
+    footer a {
 		color: white;
 	}
 }
@@ -147,6 +153,18 @@ footer {
     text-decoration: none;  
     color: var(--color);  
     word-wrap: break-word;
+}
+
+.navButton {
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
+    margin: 5px;
+    text-decoration: none;  
+}
+
+.navButton img {
+    height: 100%;
 }
 
 .linkDiv {

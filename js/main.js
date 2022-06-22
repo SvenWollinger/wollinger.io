@@ -71,3 +71,52 @@ function blur() {
 
 window.onblur = blur;
 window.onfocus = focus;
+
+function getChild(id) {
+    var e = document.getElementById(id);
+    if(e == undefined) return undefined;
+
+    return e.childNodes[0];
+}
+
+function removeSelected(e) {
+    if(e == undefined) return;
+    e.classList.remove("selected");
+}
+
+function navClick(page) {
+    //Get img tags to display selected
+    var navContact = getChild("navContact");
+    var navProjects = getChild("navProjects");
+    var navHobbys = getChild("navHobbys");
+    var navPets = getChild("navPets");
+
+    //Reset selected
+    removeSelected(navContact);
+    removeSelected(navProjects);
+    removeSelected(navHobbys);
+    removeSelected(navPets);
+    
+    var pageContact = document.getElementById("pageContact");
+    var pageProjects = document.getElementById("pageProjects");
+
+    pageContact.style.display = "none";
+    pageProjects.style.display = "none";
+
+    switch(page) {
+        case "contact":
+             navContact.classList.add("selected");
+             pageContact.style.display = "block";
+             break;
+        case "projects":
+            navProjects.classList.add("selected");
+            pageProjects.style.display = "block";
+            break;
+        case "hobbys":
+            navHobbys.classList.add("selected");
+            break;
+        case "pets":
+            navPets.classList.add("selected");
+            break;
+    }
+}

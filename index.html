@@ -15,37 +15,59 @@
 				
 				<h1 id="userName">@SvenWollinger</h1>
 				<p id="about">22 he/him 🇩🇪</p>
+				<div style="width:50%;">
+						<div id="navContact" class="navButton selected" onclick="navClick('contact')"><img class="icon-f-email selected"></div>
+						<div id="navProjects" class="navButton" onclick="navClick('projects')"><img class="icon-f-puzzle"></div>
+						<!--<div id="navHobbys" class="navButton" onclick="navClick('hobbys')"><img class="icon-f-heart"></div>-->
+						<!--<div id="navPets" class="navButton" onclick="navClick('pets')"><img class="icon-f-animal"></div>-->
+				</div>
 				<div id="links">
-					<a class="link" href="https://github.com/SvenWollinger" target="_blank">
-						<div class="linkDiv">
-							<img class="icon-github">
-							<span>GitHub</span>
-						</div>
-					</a>
-					<a class="link" href="javascript:mailButton()">
-						<div class="linkDiv">
-							<img class="icon-mail">
-							<span id="mailCopyText">E-Mail</span>
-						</div>
-					</a>
-					<a class="link" href="https://instagram.com/SvenWollinger" target="_blank">
-						<div class="linkDiv">
-							<img class="icon-instagram">
-							<span>Instagram</span>
-						</div>
-					</a>
-					<a class="link" href="https://twitter.com/SvenWollinger" target="_blank">
-						<div class="linkDiv">
-							<img class="icon-twitter">
-							<span>Twitter</span>
-						</div>
-					</a>
-					<a class="link" href="javascript:discordButton()">
-						<div class="linkDiv">
-							<img class="icon-discord">
-							<span id="discordCopyText">Discord</span>
-						</div>
-					</a>
+					<div id="pageContact">
+						<a class="link" href="https://github.com/SvenWollinger" target="_blank">
+							<div class="linkDiv">
+								<img class="icon-github">
+								<span>GitHub</span>
+							</div>
+						</a>
+						<a class="link" href="javascript:mailButton()">
+							<div class="linkDiv">
+								<img class="icon-mail">
+								<span id="mailCopyText">E-Mail</span>
+							</div>
+						</a>
+						<a class="link" href="https://instagram.com/SvenWollinger" target="_blank">
+							<div class="linkDiv">
+								<img class="icon-instagram">
+								<span>Instagram</span>
+							</div>
+						</a>
+						<a class="link" href="https://twitter.com/SvenWollinger" target="_blank">
+							<div class="linkDiv">
+								<img class="icon-twitter">
+								<span>Twitter</span>
+							</div>
+						</a>
+						<a class="link" href="javascript:discordButton()">
+							<div class="linkDiv">
+								<img class="icon-discord">
+								<span id="discordCopyText">Discord</span>
+							</div>
+						</a>
+					</div>
+					<div id="pageProjects" style="display:none;">
+						<a class="link" href="https://github.com/CaptureCoop/SnipSniper" target="_blank">
+							<div class="linkDiv">
+								<img src="/img/snipsniper.png">
+								<span>SnipSniper</span>
+							</div>
+						</a>
+						<a class="link" href="https://github.com/SvenWollinger/HKManager" target="_blank">
+							<div class="linkDiv">
+								<img src="/img/hkmanager.png">
+								<span>HKManager</span>
+							</div>
+						</a>
+					</div>
 				</div>
 
 				<footer>Based on <a href="https://github.com/MichaelBarney/LinkFree/tree/master/Templates/mnmlsm" target="_blank">LinkFree</a> | Icons by <a href="https://icons8.de" target="_blank">Icons8</a> | <a href="https://github.com/SvenWollinger/wollinger.io" target="_blank">Source Code</a></footer>
