@@ -142,22 +142,20 @@ footer {
 }
 
 .navButton {
-    float:left;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 	10px;
-	padding-bottom: 10px;
+    display: inline-block;
+    width: 3rem;
+    height: 3rem;
     margin: 5px;
-    font-weight: 500;
+    text-decoration: none;  
+}
+
+.navButton.selected {
     border-radius: 5px;
     border: dashed var(--color) 2px;
-    text-decoration: none;  
-    color: var(--color);  
-    word-wrap: break-word;
 }
 
 .navButton img {
-    height: 2rem;
+    height: 100%;
 }
 
 .linkDiv {

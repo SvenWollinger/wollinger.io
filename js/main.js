@@ -71,3 +71,30 @@ function blur() {
 
 window.onblur = blur;
 window.onfocus = focus;
+
+function navClick(page) {
+    var navContact = document.getElementById("navContact");
+    var navProjects = document.getElementById("navProjects");
+    var navHobbys = document.getElementById("navHobbys");
+    var navPets = document.getElementById("navPets");
+    navContact.classList.remove("selected");
+    navProjects.classList.remove("selected");
+    navHobbys.classList.remove("selected");
+    navPets.classList.remove("selected");
+    
+    
+    switch(page) {
+        case "contact":
+             navContact.classList.add("selected");
+             break;
+        case "projects":
+            navProjects.classList.add("selected");
+            break;
+        case "hobbys":
+            navHobbys.classList.add("selected");
+            break;
+        case "pets":
+            navPets.classList.add("selected");
+            break;
+    }
+}
