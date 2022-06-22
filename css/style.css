@@ -4,43 +4,35 @@
 }
 
 @media (prefers-color-scheme: light) {
-    .icon-discord {
-		content: url("/img/icons8/black/discord.svg");
-	}
-	.icon-github {
-		content: url("/img/icons8/black/github.svg");
-	}
-	.icon-instagram {
-		content: url("/img/icons8/black/instagram.svg");
-	}
-	.icon-mail {
-		content: url("/img/icons8/black/mail.png");
-	}
-	.icon-twitter {
-		content: url("/img/icons8/black/twitter.svg");
-	}
-	footer a {
+    .icon-discord {     content: url("/img/icons8/black/discord.svg")}
+	.icon-github {      content: url("/img/icons8/black/github.svg")}
+	.icon-instagram {   content: url("/img/icons8/black/instagram.svg")}
+	.icon-mail {        content: url("/img/icons8/black/mail.png")}
+	.icon-twitter {     content: url("/img/icons8/black/twitter.svg")}
+
+    .icon-f-email {     content: url("/img/icons8/black/folder-email.png")}
+    .icon-f-puzzle {    content: url("/img/icons8/black/folder-puzzle.png")}
+    .icon-f-animal {    content: url("/img/icons8/black/folder-animal.png")}
+    .icon-f-heart {     content: url("/img/icons8/black/folder-heart.png")}
+    
+    footer a {
 		color: black;
 	}
 }
 
 @media (prefers-color-scheme: dark) {
-    .icon-discord {
-		content: url("/img/icons8/white/discord.svg");
-	}
-	.icon-github {
-		content: url("/img/icons8/white/github.svg");
-	}
-	.icon-instagram {
-		content: url("/img/icons8/white/instagram.svg");
-	}
-	.icon-mail {
-		content: url("/img/icons8/white/mail.png");
-	}
-	.icon-twitter {
-		content: url("/img/icons8/white/twitter.svg");
-	}
-	footer a {
+    .icon-discord {     content: url("/img/icons8/white/discord.svg")}
+	.icon-github {      content: url("/img/icons8/white/github.svg")}
+	.icon-instagram {   content: url("/img/icons8/white/instagram.svg")}
+	.icon-twitter {     content: url("/img/icons8/white/twitter.svg")}
+	.icon-mail {        content: url("/img/icons8/white/mail.png")}
+
+    .icon-f-email {     content: url("/img/icons8/white/folder-email.png")}
+    .icon-f-puzzle {    content: url("/img/icons8/white/folder-puzzle.png")}
+    .icon-f-animal {    content: url("/img/icons8/white/folder-animal.png")}
+    .icon-f-heart {     content: url("/img/icons8/white/folder-heart.png")}
+
+    footer a {
 		color: white;
 	}
 }
@@ -147,6 +139,25 @@ footer {
     text-decoration: none;  
     color: var(--color);  
     word-wrap: break-word;
+}
+
+.navButton {
+    float:left;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 	10px;
+	padding-bottom: 10px;
+    margin: 5px;
+    font-weight: 500;
+    border-radius: 5px;
+    border: dashed var(--color) 2px;
+    text-decoration: none;  
+    color: var(--color);  
+    word-wrap: break-word;
+}
+
+.navButton img {
+    height: 2rem;
 }
 
 .linkDiv {
