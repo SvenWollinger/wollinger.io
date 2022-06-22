@@ -73,10 +73,13 @@ window.onblur = blur;
 window.onfocus = focus;
 
 function navClick(page) {
-    var navContact = document.getElementById("navContact");
-    var navProjects = document.getElementById("navProjects");
-    var navHobbys = document.getElementById("navHobbys");
-    var navPets = document.getElementById("navPets");
+    //Get img tags to display selected
+    var navContact = document.getElementById("navContact").childNodes[0];
+    var navProjects = document.getElementById("navProjects").childNodes[0];
+    var navHobbys = document.getElementById("navHobbys").childNodes[0];
+    var navPets = document.getElementById("navPets").childNodes[0];
+
+    //Reset selected
     navContact.classList.remove("selected");
     navProjects.classList.remove("selected");
     navHobbys.classList.remove("selected");
