@@ -97,13 +97,20 @@ function navClick(page) {
     removeSelected(navHobbys);
     removeSelected(navPets);
     
-    
+    var pageContact = document.getElementById("pageContact");
+    var pageProjects = document.getElementById("pageProjects");
+
+    pageContact.style.display = "none";
+    pageProjects.style.display = "none";
+
     switch(page) {
         case "contact":
              navContact.classList.add("selected");
+             pageContact.style.display = "block";
              break;
         case "projects":
             navProjects.classList.add("selected");
+            pageProjects.style.display = "block";
             break;
         case "hobbys":
             navHobbys.classList.add("selected");
