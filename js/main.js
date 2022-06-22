@@ -72,18 +72,30 @@ function blur() {
 window.onblur = blur;
 window.onfocus = focus;
 
+function getChild(id) {
+    var e = document.getElementById(id);
+    if(e == undefined) return undefined;
+
+    return e.childNodes[0];
+}
+
+function removeSelected(e) {
+    if(e == undefined) return;
+    e.classList.remove("selected");
+}
+
 function navClick(page) {
     //Get img tags to display selected
-    var navContact = document.getElementById("navContact").childNodes[0];
-    var navProjects = document.getElementById("navProjects").childNodes[0];
-    var navHobbys = document.getElementById("navHobbys").childNodes[0];
-    var navPets = document.getElementById("navPets").childNodes[0];
+    var navContact = getChild("navContact");
+    var navProjects = getChild("navProjects");
+    var navHobbys = getChild("navHobbys");
+    var navPets = getChild("navPets");
 
     //Reset selected
-    navContact.classList.remove("selected");
-    navProjects.classList.remove("selected");
-    navHobbys.classList.remove("selected");
-    navPets.classList.remove("selected");
+    removeSelected(navContact);
+    removeSelected(navProjects);
+    removeSelected(navHobbys);
+    removeSelected(navPets);
     
     
     switch(page) {
