@@ -72,7 +72,6 @@ body {
     padding: 0;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    display: flex;
     min-height: 100vh;
     min-width: 100vw;
     flex-direction: column;
