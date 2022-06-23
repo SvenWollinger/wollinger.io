@@ -77,7 +77,7 @@ function navClick(page) {
 
     //Reset selected
     setSelected(false, navContact, navProjects, navHobbys, navPets);
-    setVisible(false, pageContact, pageProjects);
+    setVisible(false, pageContact, pageProjects, pageHobbys);
 
     switch(page) {
         case "contact":
