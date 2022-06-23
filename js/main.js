@@ -73,6 +73,7 @@ function navClick(page) {
     //Get pages
     var pageContact = getByID("pageContact");
     var pageProjects = getByID("pageProjects");
+    var pageHobbys = getByID("pageHobbys");
 
     //Reset selected
     setSelected(false, navContact, navProjects, navHobbys, navPets);
@@ -89,6 +90,7 @@ function navClick(page) {
             break;
         case "hobbys":
             setSelected(true, navHobbys);
+            setVisible(true, pageHobbys);
             break;
         case "pets":
             setSelected(true, navPets);
