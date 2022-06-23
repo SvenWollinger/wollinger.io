@@ -210,3 +210,8 @@ footer {
     -o-transition: all 1s ease;
     transition: all 1s ease;
 }
+
+.projectTypeTitle {
+    margin: 0px;
+    margin-bottom: 5px;
+}
