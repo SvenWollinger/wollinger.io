@@ -1,15 +1,15 @@
-var discordCopyText = document.getElementById("discordCopyText");
+var discordCopyText = getByID("discordCopyText");
 var discordCopyTextOriginal = discordCopyText.innerHTML;
 
-var mailCopyText = document.getElementById("mailCopyText");
+var mailCopyText = getByID("mailCopyText");
 var mailCopyTextOriginal = mailCopyText.innerHTML;
 
 var isRotating = false;
-function rotateImage() {
+function rotateUserPhoto() {
     if(isRotating) return;
     isRotating = true;
     
-    var image = document.getElementById("userPhoto");
+    var image = getByID("userPhoto");
     image.classList.add("start");
     setTimeout(function() {
         image.classList.remove("start");
@@ -49,6 +49,20 @@ function blur() {
 window.onblur = blur;
 window.onfocus = focus;
 
+function setSelected(isSelected, ...elements) {
+    for(var index in elements) {
+        var element = elements[index];
+        if(element != undefined) isSelected ? element.classList.add("selected") : element.classList.remove("selected");
+    }
+}
+
+function setVisible(isVisible, ...elements) {
+    for(var index in elements) {
+        var element = elements[index];
+        if(element != undefined) isVisible ? element.style.display = "block" : element.style.display = "none";
+    }
+}
+
 function navClick(page) {
     //Get img tags to display selected
     var navContact = getChild("navContact");
@@ -56,32 +70,28 @@ function navClick(page) {
     var navHobbys = getChild("navHobbys");
     var navPets = getChild("navPets");
 
-    //Reset selected
-    removeSelected(navContact);
-    removeSelected(navProjects);
-    removeSelected(navHobbys);
-    removeSelected(navPets);
-    
-    var pageContact = document.getElementById("pageContact");
-    var pageProjects = document.getElementById("pageProjects");
+    //Get pages
+    var pageContact = getByID("pageContact");
+    var pageProjects = getByID("pageProjects");
 
-    pageContact.style.display = "none";
-    pageProjects.style.display = "none";
+    //Reset selected
+    setSelected(false, navContact, navProjects, navHobbys, navPets);
+    setVisible(false, pageContact, pageProjects);
 
     switch(page) {
         case "contact":
-             navContact.classList.add("selected");
-             pageContact.style.display = "block";
-             break;
+            setSelected(true, navContact);
+            setVisible(true, pageContact);
+            break;
         case "projects":
-            navProjects.classList.add("selected");
-            pageProjects.style.display = "block";
+            setSelected(true, navProjects);
+            setVisible(true, pageProjects);
             break;
         case "hobbys":
-            navHobbys.classList.add("selected");
+            setSelected(true, navHobbys);
             break;
         case "pets":
-            navPets.classList.add("selected");
+            setSelected(true, navPets);
             break;
     }
 }
