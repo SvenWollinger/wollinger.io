@@ -184,6 +184,7 @@ footer {
 	display: table-cell;
 	vertical-align: middle;
 	height: 2rem;
+    width: 2rem;
 }
 
 @media (prefers-color-scheme: dark) {
