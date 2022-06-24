@@ -6,6 +6,7 @@
     }
     println("Composer installed!\n");
 
+    require_once 'vendor/autoload.php';
     use WebPConvert\WebPConvert;
 
     println("Cleaning build directory...");
@@ -59,9 +60,10 @@
         $files = new RecursiveIteratorIterator($it, RecursiveIteratorIterator::CHILD_FIRST);
         foreach($files as $file) {
             if(!is_dir($file) && shouldConvertWebp($file)) {
-                $destination = str_replace(pathinfo($file)["extension"], "", $file) . ".webp";
+                $destination = str_replace(pathinfo($file)["extension"], "", $file) . "webp";
                 $options = [];
-                WebPConvert::convert($file, $destination, $options);
+                WebPConvert::convert(fixSlashes($file), fixSlashes($destination), $options);
+                unlink($file);
             }
         }
     }
