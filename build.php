@@ -42,6 +42,24 @@
         return (DIRECTORY_SEPARATOR === '\\') ? str_replace('/', '\\', $string) : str_replace('\\', '/', $string);
     }
 
+    function shouldConvertWebp($file) {
+        switch(pathinfo($file)['extension']) {
+            case "jpg":
+            case "png": return true;
+        }
+        return false;
+    }
+    
+    function convertWebp($folder) {
+        $it = new RecursiveDirectoryIterator($folder, RecursiveDirectoryIterator::SKIP_DOTS);
+        $files = new RecursiveIteratorIterator($it, RecursiveIteratorIterator::CHILD_FIRST);
+        foreach($files as $file) {
+            if(!is_dir($file) && shouldConvertWebp($file)) {
+                //Convert
+            }
+        }
+    }
+
     function copyFolder($folder, $dest) {
         $it = new RecursiveDirectoryIterator($folder, RecursiveDirectoryIterator::SKIP_DOTS);
         $files = new RecursiveIteratorIterator($it, RecursiveIteratorIterator::CHILD_FIRST);
