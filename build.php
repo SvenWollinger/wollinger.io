@@ -6,6 +6,8 @@
     }
     println("Composer installed!\n");
 
+    use WebPConvert\WebPConvert;
+
     println("Cleaning build directory...");
     deleteFolder("build");
 
@@ -13,7 +15,9 @@
     mkdir("build");
     copyFolder("src/resources/", "build");
     createPage("contact.php", "index");
-    println("Done!");
+
+    println("\nConverting images...");
+    convertWebp("build/img/");
 
     if($argc != 1 && $argv[1] == "run")
         shell_exec("php -S 127.0.0.1:80 -t build/");
@@ -55,7 +59,9 @@
         $files = new RecursiveIteratorIterator($it, RecursiveIteratorIterator::CHILD_FIRST);
         foreach($files as $file) {
             if(!is_dir($file) && shouldConvertWebp($file)) {
-                //Convert
+                $destination = str_replace(pathinfo($file)["extension"], "", $file) . ".webp";
+                $options = [];
+                WebPConvert::convert($file, $destination, $options);
             }
         }
     }
