@@ -12,9 +12,22 @@
     println("\nStarting build...");
     mkdir("build");
     copyFolder("src/resources/", "build");
+    createPage("contact.php", "index");
+    println("Done!");
+
+    if($argc != 1 && $argv[1] == "run")
+        shell_exec("php -S 127.0.0.1:80 -t build/");
 ?>
 
 <?php
+
+    function createPage($pageFile, $name) {
+        $output = shell_exec("php src/template.php " . $pageFile);
+        $htmlFile = fopen("build/" . $name . ".html", "w");
+        fwrite($htmlFile, $output);
+        fclose($htmlFile);
+    }
+
     function println($message) {
         echo $message . "\n";
     }
