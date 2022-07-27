@@ -95,6 +95,12 @@ body {
     margin: 0;
 }
 
+.panflag {
+    vertical-align: middle;
+    height: 1.25rem;
+    margin-bottom: 0.20rem;
+}
+
 footer {
     text-align: center;
     font-size: 0.75rem;
