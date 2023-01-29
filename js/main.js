@@ -97,3 +97,14 @@ function navClick(page) {
             break;
     }
 }
+
+function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+var photo = "img/pfp" + getRandomInt(1, 9) + ".webp"
+if(getRandomInt(0, 100) > 97) photo = "img/pfp0.webp"
+
+getByID("userPhoto").src = photo
