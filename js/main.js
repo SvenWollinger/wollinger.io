@@ -15,6 +15,9 @@ function rotateUserPhoto() {
         image.classList.remove("start");
         isRotating = false;
     }, 1000);
+	setTimeout(function() {
+		randomPic();
+	}, 200);
 }
 
 function discordButton() {
@@ -104,7 +107,12 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-var photo = "img/pfp" + getRandomInt(1, 9) + ".webp"
-if(getRandomInt(0, 100) > 97) photo = "img/pfp0.webp"
+function randomPic() {
+	var photo = "img/pfp" + getRandomInt(1, 9) + ".webp";
+	if(getRandomInt(0, 100) > 97) photo = "img/pfp0.webp";
 
-getByID("userPhoto").src = photo
+	if(getByID("userPhoto").src.includes(photo)) randomPic();
+	else getByID("userPhoto").src = photo;
+}
+
+randomPic()
