@@ -21,7 +21,7 @@ function rotateUserPhoto() {
 }
 
 function discordButton() {
-    copyFunction(discordCopyText, discordCopyTextOriginal, "SvenWollinger#0001");
+    copyFunction(discordCopyText, discordCopyTextOriginal, "SvenWollinger");
 }
 
 function mailButton() {
