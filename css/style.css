@@ -10,6 +10,7 @@
 	.icon-instagram {content: url("/img/icons8/black/instagram.svg")}
 	.icon-mail {content: url("/img/icons8/black/mail.webp")}
 	.icon-twitter {content: url("/img/icons8/black/twitter.svg")}
+    .icon-bluesky {content: url("/img/icons8/black/bluesky.svg")}
 
     .icon-f-email {content: url("/img/icons8/black/folder-email.webp")}
     .icon-f-email.selected {content: url("/img/icons8/black/folder-email-sel.webp")}
@@ -34,6 +35,7 @@
 	.icon-instagram {content: url("/img/icons8/white/instagram.svg")}
 	.icon-mail {content: url("/img/icons8/white/mail.webp")}
 	.icon-twitter {content: url("/img/icons8/white/twitter.svg")}
+    .icon-bluesky {content: url("/img/icons8/white/bluesky.svg")}
 
     .icon-f-email {content: url("/img/icons8/white/folder-email.webp")}
     .icon-f-email.selected {content: url("/img/icons8/white/folder-email-sel.webp")}
